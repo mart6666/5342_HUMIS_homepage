@@ -1,44 +1,149 @@
 body {
+    background-color: #333;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #292827;
 
-    div.container{
-        width: 780px;
-        border: 5px solid red;
+    div.container {
         margin: 0 auto;
+        width: 780px;
         background-color: white;
 
-        section.middle {
-            height: 500px;
-
-            > nav {
-                text-align: right;
-                font-size:
-
-                a{
-                    color: black;
-
-                }
+        header,
+        section.subHeader {
+            img {
+                display: block;
             }
         }
 
-        div.brown-box{
-            min-height: ;
+        section.middle {
+            padding: 10px;
+            background-image: url('files/uofu_medallion_rt.gif');
+            background-repeat: no-repeat;
+            background-position: bottom right;
+
+            > nav {
+                text-align: right;
+
+                a {
+                    color: black;
+                    font-size: 11px;
+                    text-decoration: none;
+                    padding: 0 6px 0 3px;
+                    border-right: 1px solid black;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    img {
+                        vertical-align: middle;
+                    }
+
+                    &:last-of-type {
+                        border-right: none;
+                    }
+                }
+            }
+
+            nav.top-nav {
+                text-transform: uppercase;
+            }
+
+            section.brown-box {
+                background-color: #C8CAAF;
+                /*height: 550px;*/
+                margin: 1rem 0;
+                border-radius: 15px;
+                padding: 25px;
+
+                aside {
+                    min-height: 100%;
+                }
+
+                aside.left-side {
+                    float: left;
+                    width: 250px;
+
+                    nav {
+                        a {
+                            display: block;
+                            color: black;
+                            border-bottom: 1px solid #505A2F;
+                            text-transform: uppercase;
+                            padding: 12px 0 12px 12px;
+                            font-size: 11px;
+                            text-decoration: none;
+
+                            &:hover {
+                                background-color: #333333;
+                                color: white;
+                            }
+                        }
+                    }
+
+                    div {
+                        margin: 30px auto 0;
+                        width: 155px;
+
+                        img {
+                            margin: 5px 0;
+                        }
+                    }
+                }
+
+                aside.right-side {
+                    float: right;
+                    width: 400px;
+                    background-color: white;
+                    padding: 12px;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    h1 {
+                        font-size: 21px;
+                        color: #505A2F;
+                        border-bottom: 1px dashed #505A2F;
+                        text-transform: uppercase;
+                        font-weight: normal;
+                    }
+
+                    p {
+                        font-size: 11px;
+
+                        span {
+                            font-weight: bold;
+                            font-size: 110%;
+                        }
+                    }
+
+                    p.learn-more {
+                        text-align: right;
+
+                        a {
+                            color: #505A2F;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            nav.bottom-nav {
+                margin-top: 70px;
+                text-transform: lowercase;
+            }
         }
 
         footer {
-            background-color: green;
-            text-align: center;
-            color: white;
             font-size: 10px;
+            text-align: center;
             padding: 10px 0;
-        }
-
-        p{
-            font-family: arial, times new roman, serif;
-            /*font-size: 70px;*/
-            border: 1px black solid;
-            padding: 10px 20px 30px;
+            background-color: #676E3D;
+            color: white;
         }
     }
 }
