@@ -1,0 +1,58 @@
+/* Mobile first */
+body {
+    background-color: #282726;
+    display: flex;
+    justify-content: center;
+
+    section.container {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        min-height: 70vh;
+        justify-content: space-between;
+        max-width: 780px;
+
+        header {
+            img {
+                width: 100%;
+            }
+        }
+
+        section.inner {
+            display: flex;
+            flex-direction: column;
+            border: 10px solid lightgray;
+            height: 100%;
+
+            nav.drop-down-menu {
+                display: none;
+            }
+
+            nav.minor{
+
+            }
+        }
+
+
+        /* Tablet and up overrides */
+        @media screen and (width >= 600px) {
+
+            section.middle{
+
+                display: flex;
+
+                div.left-side{
+                    display: block;
+                    width: 30%;
+                }
+            }
+            section.inner{
+                width: 70%;
+
+                nav.drop-down-menu {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
