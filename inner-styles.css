@@ -1,8 +1,16 @@
+:root {
+    --engDeptGreen: #505A2F;
+    --black: #000;
+    --green-light: #B4B697;
+    --grey-light: #F2F1F0;
+}
+
 /* Mobile first */
 body {
     background-color: #282726;
     display: flex;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 
     section.container {
         background-color: white;
@@ -15,42 +23,150 @@ body {
         header {
             img {
                 width: 100%;
+                display: block;
             }
         }
 
-        section.inner {
+        section.middle {
+            height: 100%;
             display: flex;
             flex-direction: column;
-            border: 10px solid lightgray;
-            height: 100%;
 
-            nav.drop-down-menu {
+            div.left-side {
                 display: none;
             }
 
-            nav.minor{
+            section.inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
 
+                nav.drop-down-menu {
+                    display: flex;
+                    gap: 20px;
+                    justify-content: space-between;
+                    background-color: grey;
+                    padding: 20px 10px;
+
+                    label{
+                        select{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                nav.minor {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 10px;
+                    border: 3px solid blue;
+                    align-items: center;
+
+                    a {
+                        color: var(--black);
+                        border-right: 1px solid black;
+                        padding-right: 5px;
+                        margin-right: 5px;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        img {
+                            vertical-align: middle;
+                        }
+
+                        &:last-of-type {
+                            border-right: none;
+                        }
+                    }
+
+
+                    &.top {
+                        text-transform: uppercase;
+                        margin-top: 5px;
+                        order: -2;
+
+                    }
+                    &.bottom {
+                        text-transform: lowercase;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                main {
+                    padding: 30px;
+                }
             }
+        }
+
+        footer {
+            color: white;
+            background-color: var(--engDeptGreen);
+            text-align: center;
+            padding: 10px;
+            font-size: 10px;
         }
 
 
         /* Tablet and up overrides */
         @media screen and (width >= 600px) {
+            section.middle {
+                flex-direction: row;
 
-            section.middle{
-
-                display: flex;
-
-                div.left-side{
-                    display: block;
-                    width: 30%;
-                }
-            }
-            section.inner{
-                width: 70%;
-
-                nav.drop-down-menu {
+                div.left-side {
                     display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 30%;
+                    background-color: var(--grey-light);
+                    border-right: 2px solid var(--green-light);
+                    padding-bottom: 20px;
+
+                    nav.left-nav {
+                        margin: 20px 20px 0;
+
+                        a {
+                            display: block;
+                            text-transform: uppercase;
+                            font-size: 10px;
+                            color: var(--black);
+                            border-bottom: 2px solid var(--engDeptGreen);
+                            text-decoration: none;
+                            padding: 10px 0 10px 10px;
+
+                            &:hover {
+                                background-color: var(--engDeptGreen);
+                                color: #fff;
+                            }
+
+                            &.active{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    div.login-links{
+                        border: 1px solid var(--engDeptGreen);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+
+                section.inner {
+                    width: 70%;
+
+                    nav.drop-down-menu {
+                        display: none;
+                    }
+
+                    nav.minor {
+                        justify-content: flex-end;
+                    }
                 }
             }
         }
