@@ -95,6 +95,12 @@ body {
                     }
                 }
 
+                h1.undergrad {
+                    color: #d62c39;
+                    text-decoration: underline;
+                    text-align: center;
+                }
+
                 main {
                     padding: 30px;
 
@@ -124,6 +130,39 @@ body {
                         display: block;
                     }
 
+                }
+
+                .content-columns{
+                    display: flex;
+                    gap: 20px;
+
+                    .sub-topics{
+                        border: #A12D37 solid 1px;
+                        font-size: 11px;
+                        text-align: left;
+                        padding-left: 20px;
+                        padding-right: 12px;
+                        line-height: 1.5;
+                        border-right: 2px dotted #666;
+                        border-top: none;
+                        border-left: none;
+                        border-bottom: none;
+                    }
+
+                    .content{
+                        font-size: 12px;
+                        text-align: justify;
+                        padding-right: 20px;
+                        padding-bottom: 200px;
+
+
+                        p.link {
+                            font-size: 10px;
+                            color: #d62c39;
+                            font-weight: bold;
+                            font-family: "Arial Black";
+                        }
+                    }
                 }
             }
         }
@@ -192,6 +231,22 @@ body {
                     nav.minor {
                         justify-content: flex-end;
                     }
+                }
+            }
+            div.content-columns {
+                flex-direction: row; /* <-- 2. En escritorio vuelven a estar lado a lado */
+
+                .sub-topics {
+                    width: 32%;
+                    border-right: 2px dotted #666; /* Vuelve la línea punteada */
+                    padding-right: 12px;
+                    padding-left: 20px;
+                }
+
+                .content {
+                    width: 68%;
+                    padding-right: 20px;
+                    padding-bottom: 100px;
                 }
             }
         }
